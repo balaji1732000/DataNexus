@@ -1,0 +1,15 @@
+lottie_url1: "https://lottie.host/f89e48e2-55e5-4fdf-a406-0be2b00cc2af/ECJa6PGrCV.json"
+lottie_url2: "https://lottie.host/05824020-0a23-4373-8418-721bd6e68504/FE5XXRT455.json"
+welcome_template: "DataNexus revolutionizes data analysis by offering a user-friendly AI chatbot that simplifies interactions with various data formats such as CSV, PDF, and TXT. With an intuitive chat interface, users can effortlessly explore, clean, preprocess, and analyze their data without the need for coding or technical expertise. DataNexus automates time-consuming tasks, recommends the most suitable machine learning models, and provides visualized insights, democratizing data-driven decision-making for individuals and organizations of all skill levels. With plans for expanding functionality, improving documentation, and aiming for widespread adoption, DataNexus is set to become the go-to platform for unlocking the true potential of data."
+introduction_template1: |
+  As a data analysis agent, **DataNexus Analyst** is capable of making autonomous decisions based on your data:
+  - Effortless Data Preprocessing
+  - Intelligent Encoding & Balancing
+  - Automated Model Selection & Training
+  - Dynamic Data Visualization
+  - And much more...
+introduction_template2: |
+  **You only need to**:
+  1. **Select** your data file
+  2. **Choose** an analysis mode
+  3. **Press** the Start button
