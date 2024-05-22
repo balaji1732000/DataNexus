@@ -90,7 +90,7 @@ with st.container():
             with open(path, "rb") as image_file:
                 return base64.b64encode(image_file.read()).decode()
 
-        file_path = ".\exports\data-analysis-4179002-3479081-ezgif.com-optimize.gif"
+        file_path = "assets\data-analysis-4179002-3479081-ezgif.com-optimize.gif"
         image_string = get_image_string(file_path)
 
         st.markdown(
