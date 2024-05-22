@@ -12,6 +12,7 @@ from regression_model import regression_model_pipeline
 from visualization import data_visualization
 from src.util import read_file_from_streamlit
 
+import base64
 
 # Modules for Chat Analyser
 import os
@@ -65,7 +66,7 @@ st.sidebar.title("DataNexus")
 # Create a dropdown menu for selecting the page
 page = st.sidebar.selectbox(
     "Go to",
-    ["Home", "GenAI Data Modeling", "AI Data Agents"],
+    ["Home", "GenAI Data-to-Modeling", "AI Data Agents"],
 )
 
 # TITLE SECTION
@@ -85,10 +86,17 @@ with st.container():
         else:
             st.write(st.session_state.welcome_message)
 
-        # # Add GIF here
-        # file_path = "F:\Documents backup\AI Projects\to be determined\Streamline-Analyst\exports\data-analysis-4179002-3479081-ezgif.com-optimize.gif"
-        # gif = open(file_path, "rb").read()
-        # st.image(gif, caption="DataNexus in action")
+        def get_image_string(path):
+            with open(path, "rb") as image_file:
+                return base64.b64encode(image_file.read()).decode()
+
+        file_path = ".\exports\data-analysis-4179002-3479081-ezgif.com-optimize.gif"
+        image_string = get_image_string(file_path)
+
+        st.markdown(
+            f'<p align="center"><img src="data:image/gif;base64,{image_string}" alt="DataNexus in action"></p>',
+            unsafe_allow_html=True,
+        )
 
         st.write(
             """
@@ -101,7 +109,7 @@ with st.container():
         """
         )
     # DATA ANALYSIS SECTION
-    elif page == "GenAI Data Modeling":
+    elif page == "GenAI Data-to-Modeling":
         with st.container():
             st.divider()
             st.header("Let's Get Started")
@@ -176,7 +184,7 @@ with st.container():
     elif page == "AI Data Agents":
         layout, sidebar, utils = Layout(), Sidebar(), Utilities()
         layout.show_header("Data")
-        user_api_key = utils.load_api_key()
+        # user_api_key = utils.load_api_key()
         st.session_state.setdefault("reset_chat", False)
         uploaded_file = utils.handle_upload(["csv", "xlsx"])
         if uploaded_file:

@@ -11,9 +11,9 @@ class Sidebar:
 
     @staticmethod
     def about():
-        about = st.sidebar.expander("🤖 About DataNexus")
+        about = st.sidebar.expander("🤖 About DataNexus Chat")
         sections = [
-            "#### DataNexus is an AI-powered chatbot designed to simplify data analysis and empower users of all skill levels to harness the full potential of their data effortlessly. 📊",
+            "#### DataNexus Chat is an AI-powered chatbot designed to simplify data analysis and empower users of all skill levels to harness the full potential of their data effortlessly. 📊",
             "#### It leverages the power of conversational AI and machine learning automation to guide users through the entire data analysis process, from data upload to generating insights. 🔬",
             "#### With its intuitive chat interface, DataNexus allows users to interact with their data through natural language commands, eliminating the need for coding or technical expertise. 💬",
             "#### The AI-powered data assistant handles complex tasks such as data cleaning, preprocessing, feature engineering, and intelligent model selection, ensuring accurate and reliable results. 🧠",
