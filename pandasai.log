@@ -5939,3 +5939,1397 @@ NameError: name 'io' is not defined
 2024-05-22 03:12:52 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/akre8v3jthrhr0cfkmdrzdk7cw "HTTP/1.1 200 OK"
 2024-05-22 03:12:53 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/akre8v3jthrhr0cfkmdrzdk7cw "HTTP/1.1 200 OK"
 2024-05-22 03:12:54 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/akre8v3jthrhr0cfkmdrzdk7cw "HTTP/1.1 200 OK"
+2024-05-22 03:42:42 [INFO] Question: Top 10 Car models and create bar chart to understand better
+2024-05-22 03:42:42 [INFO] Running PandasAI with langchain_replicate LLM...
+2024-05-22 03:42:42 [INFO] Prompt ID: 0f0c8263-2f7b-45b9-bf3c-85e9c8775926
+2024-05-22 03:42:42 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-22 03:42:42 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-22 03:42:42 [INFO] Executing Step 1: CacheLookup
+2024-05-22 03:42:42 [INFO] Executing Step 2: PromptGeneration
+2024-05-22 03:42:42 [INFO] Using prompt: <dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+79,Mercedes,A3,2020,20000,Diesel,Manual,Second,25,2198,98,4,2000000
+33,Maruti,X5,2019,38000,Petrol,Manual,First,16,1950,74,7,1200000
+86,Audi,Fortuner,2018,22000,Petrol,Automatic,Third,13,1498,191,5,1900000
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Top 10 Car models and create bar chart to understand better
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-05-22 03:42:42 [INFO] Executing Step 3: CodeGenerator
+2024-05-22 03:42:44 [INFO] HTTP Request: GET https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct "HTTP/1.1 401 Unauthorized"
+2024-05-22 03:42:44 [ERROR] Pipeline failed on step 3: ReplicateError Details:
+title: Invalid authentication token
+status: 401
+detail: Incorrect authentication token. Learn how to authenticate and get your API token here: https://replicate.com/docs/reference/http#authentication
+2024-05-22 03:53:52 [INFO] Question: Can you create a piechart for Model?
+2024-05-22 03:53:52 [INFO] Running PandasAI with langchain_replicate LLM...
+2024-05-22 03:53:52 [INFO] Prompt ID: 7862ee4f-e5d5-4837-8d86-72f66ce75155
+2024-05-22 03:53:52 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-22 03:53:52 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-22 03:53:52 [INFO] Executing Step 1: CacheLookup
+2024-05-22 03:53:52 [INFO] Executing Step 2: PromptGeneration
+2024-05-22 03:53:52 [INFO] Using prompt: <dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+79,Ford,Altroz,2016,25000,Diesel,Automatic,Second,21,1995,98,7,3000000
+41,Audi,Santro,2019,22000,Petrol,Automatic,First,18,2967,241,5,500000
+40,Maruti,A4,2021,15000,Petrol,Manual,Third,19,1999,191,4,2500000
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Can you create a piechart for Model?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-05-22 03:53:52 [INFO] Executing Step 3: CodeGenerator
+2024-05-22 03:53:54 [INFO] HTTP Request: GET https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct "HTTP/1.1 200 OK"
+2024-05-22 03:53:54 [INFO] HTTP Request: POST https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct/predictions "HTTP/1.1 201 Created"
+2024-05-22 03:53:55 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/r2y1w3gb0drhy0cfkn0rjt6v8c "HTTP/1.1 200 OK"
+2024-05-22 03:53:56 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/r2y1w3gb0drhy0cfkn0rjt6v8c "HTTP/1.1 200 OK"
+2024-05-22 03:53:57 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/r2y1w3gb0drhy0cfkn0rjt6v8c "HTTP/1.1 200 OK"
+2024-05-22 03:53:57 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+79,Ford,Altroz,2016,25000,Diesel,Automatic,Second,21,1995,98,7,3000000
+41,Audi,Santro,2019,22000,Petrol,Automatic,First,18,2967,241,5,500000
+40,Maruti,A4,2021,15000,Petrol,Manual,Third,19,1999,191,4,2500000
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Can you create a piechart for Model?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-05-22 03:53:57 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+dfs = [pd.read_csv(file) for file in ['file1.csv', 'file2.csv']]  # Replace with your file names or method to load dataframes
+
+# Declare result var: 
+result = { "type": "plot", "value": "model_piechart.png" }
+plt.pie([len(df) for df in dfs], labels=[df['Model'].iloc[0] for df in dfs])
+plt.savefig('model_piechart.png')
+            ```
+            
+2024-05-22 03:53:57 [INFO] Executing Step 4: CachePopulation
+2024-05-22 03:53:57 [INFO] Executing Step 5: CodeCleaning
+2024-05-22 03:53:57 [INFO] Saving charts to F:\Documents backup\AI Projects\to be determined\Streamline-Analyst\exports\charts\temp_chart.png
+2024-05-22 03:53:57 [INFO] 
+Code running:
+```
+result = {'type': 'plot', 'value': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'}
+plt.pie([len(df) for df in dfs], labels=[df['Model'].iloc[0] for df in dfs])
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+        ```
+2024-05-22 03:53:57 [INFO] Executing Step 6: CodeExecution
+2024-05-22 03:53:57 [ERROR] Failed with error: Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2024-05-22 03:53:57 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-05-22 03:53:57 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-22 03:53:57 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-22 03:53:57 [INFO] Using prompt: <dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+79,Ford,Altroz,2016,25000,Diesel,Automatic,Second,21,1995,98,7,3000000
+41,Audi,Santro,2019,22000,Petrol,Automatic,First,18,2967,241,5,500000
+40,Maruti,A4,2021,15000,Petrol,Manual,Third,19,1999,191,4,2500000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Can you create a piechart for Model?
+
+You generated this python code:
+result = {'type': 'plot', 'value': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'}
+plt.pie([len(df) for df in dfs], labels=[df['Model'].iloc[0] for df in dfs])
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2024-05-22 03:53:57 [INFO] Executing Step 1: CodeGenerator
+2024-05-22 03:53:57 [INFO] HTTP Request: POST https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct/predictions "HTTP/1.1 201 Created"
+2024-05-22 03:53:58 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/v84pcngpv5rhw0cfkn0v3xa980 "HTTP/1.1 200 OK"
+2024-05-22 03:53:59 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/v84pcngpv5rhw0cfkn0v3xa980 "HTTP/1.1 200 OK"
+2024-05-22 03:54:00 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/v84pcngpv5rhw0cfkn0v3xa980 "HTTP/1.1 200 OK"
+2024-05-22 03:54:01 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/v84pcngpv5rhw0cfkn0v3xa980 "HTTP/1.1 200 OK"
+2024-05-22 03:54:01 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+79,Ford,Altroz,2016,25000,Diesel,Automatic,Second,21,1995,98,7,3000000
+41,Audi,Santro,2019,22000,Petrol,Automatic,First,18,2967,241,5,500000
+40,Maruti,A4,2021,15000,Petrol,Manual,Third,19,1999,191,4,2500000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Can you create a piechart for Model?
+
+You generated this python code:
+result = {'type': 'plot', 'value': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'}
+plt.pie([len(df) for df in dfs], labels=[df['Model'].iloc[0] for df in dfs])
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2024-05-22 03:54:01 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+# Assuming dfs is a list of dataframes
+models = [df['Model'].unique()[0] for df in dfs]
+plt.pie([len(df) for df in dfs], labels=models)
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'}
+            ```
+            
+2024-05-22 03:54:01 [INFO] Executing Step 2: CodeCleaning
+2024-05-22 03:54:01 [INFO] Saving charts to F:\Documents backup\AI Projects\to be determined\Streamline-Analyst\exports\charts\temp_chart.png
+2024-05-22 03:54:01 [INFO] 
+Code running:
+```
+models = [df['Model'].unique()[0] for df in dfs]
+plt.pie([len(df) for df in dfs], labels=models)
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'}
+        ```
+2024-05-22 03:54:01 [ERROR] Failed with error: Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2024-05-22 03:54:01 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2024-05-22 03:54:01 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-22 03:54:01 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-22 03:54:01 [INFO] Using prompt: <dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+79,Ford,Altroz,2016,25000,Diesel,Automatic,Second,21,1995,98,7,3000000
+41,Audi,Santro,2019,22000,Petrol,Automatic,First,18,2967,241,5,500000
+40,Maruti,A4,2021,15000,Petrol,Manual,Third,19,1999,191,4,2500000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Can you create a piechart for Model?
+
+You generated this python code:
+models = [df['Model'].unique()[0] for df in dfs]
+plt.pie([len(df) for df in dfs], labels=models)
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2024-05-22 03:54:01 [INFO] Executing Step 1: CodeGenerator
+2024-05-22 03:54:02 [INFO] HTTP Request: POST https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct/predictions "HTTP/1.1 201 Created"
+2024-05-22 03:54:02 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/1zeqheh7chrhy0cfkn0rg1qe3r "HTTP/1.1 200 OK"
+2024-05-22 03:54:03 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/1zeqheh7chrhy0cfkn0rg1qe3r "HTTP/1.1 200 OK"
+2024-05-22 03:54:04 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/1zeqheh7chrhy0cfkn0rg1qe3r "HTTP/1.1 200 OK"
+2024-05-22 03:54:05 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/1zeqheh7chrhy0cfkn0rg1qe3r "HTTP/1.1 200 OK"
+2024-05-22 03:54:05 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+79,Ford,Altroz,2016,25000,Diesel,Automatic,Second,21,1995,98,7,3000000
+41,Audi,Santro,2019,22000,Petrol,Automatic,First,18,2967,241,5,500000
+40,Maruti,A4,2021,15000,Petrol,Manual,Third,19,1999,191,4,2500000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Can you create a piechart for Model?
+
+You generated this python code:
+models = [df['Model'].unique()[0] for df in dfs]
+plt.pie([len(df) for df in dfs], labels=models)
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2024-05-22 03:54:05 [INFO] Code generated:
+            ```
+            models = [df['Model'].unique()[0] for df in dfs]
+plt.pie([len(df) for df in dfs], labels=models)
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+            ```
+            
+2024-05-22 03:54:05 [INFO] Executing Step 2: CodeCleaning
+2024-05-22 03:54:05 [INFO] Saving charts to F:\Documents backup\AI Projects\to be determined\Streamline-Analyst\exports\charts\temp_chart.png
+2024-05-22 03:54:05 [INFO] 
+Code running:
+```
+models = [df['Model'].unique()[0] for df in dfs]
+plt.pie([len(df) for df in dfs], labels=models)
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+        ```
+2024-05-22 03:54:05 [ERROR] Failed with error: Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\helpers\output_validator.py", line 73, in validate_result
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Result must be in the format of dictionary of type and value
+
+2024-05-22 03:54:05 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2024-05-22 03:54:05 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-22 03:54:05 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-22 03:54:05 [INFO] Using prompt: <dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+79,Ford,Altroz,2016,25000,Diesel,Automatic,Second,21,1995,98,7,3000000
+41,Audi,Santro,2019,22000,Petrol,Automatic,First,18,2967,241,5,500000
+40,Maruti,A4,2021,15000,Petrol,Manual,Third,19,1999,191,4,2500000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Can you create a piechart for Model?
+
+You generated this python code:
+models = [df['Model'].unique()[0] for df in dfs]
+plt.pie([len(df) for df in dfs], labels=models)
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\helpers\output_validator.py", line 73, in validate_result
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Result must be in the format of dictionary of type and value
+
+
+Fix the python code above and return the new python code:
+2024-05-22 03:54:05 [INFO] Executing Step 1: CodeGenerator
+2024-05-22 03:54:06 [INFO] HTTP Request: POST https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct/predictions "HTTP/1.1 201 Created"
+2024-05-22 03:54:06 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/vtzk0phqj5rht0cfkn0rhzynv4 "HTTP/1.1 200 OK"
+2024-05-22 03:54:07 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/vtzk0phqj5rht0cfkn0rhzynv4 "HTTP/1.1 200 OK"
+2024-05-22 03:54:08 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/vtzk0phqj5rht0cfkn0rhzynv4 "HTTP/1.1 200 OK"
+2024-05-22 03:54:09 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/vtzk0phqj5rht0cfkn0rhzynv4 "HTTP/1.1 200 OK"
+2024-05-22 03:54:09 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+79,Ford,Altroz,2016,25000,Diesel,Automatic,Second,21,1995,98,7,3000000
+41,Audi,Santro,2019,22000,Petrol,Automatic,First,18,2967,241,5,500000
+40,Maruti,A4,2021,15000,Petrol,Manual,Third,19,1999,191,4,2500000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Can you create a piechart for Model?
+
+You generated this python code:
+models = [df['Model'].unique()[0] for df in dfs]
+plt.pie([len(df) for df in dfs], labels=models)
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\helpers\output_validator.py", line 73, in validate_result
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Result must be in the format of dictionary of type and value
+
+
+Fix the python code above and return the new python code:
+            
+2024-05-22 03:54:09 [INFO] Code generated:
+            ```
+            models = [df['Model'].unique()[0] for df in dfs]
+plt.pie([len(df) for df in dfs], labels=models)
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+return {'type': 'image', 'value': result}
+            ```
+            
+2024-05-22 03:54:09 [INFO] Executing Step 2: CodeCleaning
+2024-05-22 03:54:09 [INFO] Saving charts to F:\Documents backup\AI Projects\to be determined\Streamline-Analyst\exports\charts\temp_chart.png
+2024-05-22 03:54:09 [INFO] 
+Code running:
+```
+models = [df['Model'].unique()[0] for df in dfs]
+plt.pie([len(df) for df in dfs], labels=models)
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+return {'type': 'image', 'value': result}
+        ```
+2024-05-22 03:54:09 [ERROR] Failed with error: Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 171, in execute_code
+    exec(code, environment)
+  File "<string>", line 5
+SyntaxError: 'return' outside function
+
+2024-05-22 03:54:09 [ERROR] Pipeline failed on step 6: 'return' outside function (<string>, line 5)
+2024-05-22 03:54:53 [INFO] Question: Top 10 Car models and create a bar chart?
+2024-05-22 03:54:53 [INFO] Running PandasAI with langchain_replicate LLM...
+2024-05-22 03:54:53 [INFO] Prompt ID: cbf934be-1def-45b7-a6d9-795ce2fa1f42
+2024-05-22 03:54:53 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-22 03:54:53 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-22 03:54:53 [INFO] Executing Step 1: CacheLookup
+2024-05-22 03:54:53 [INFO] Executing Step 2: PromptGeneration
+2024-05-22 03:54:53 [INFO] Using prompt: <dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+23,Tata,Camry,2016,30000,Petrol,Automatic,First,22,1199,150,7,4000000
+96,Hyundai,Innova,2020,15000,Diesel,Manual,Third,17,1998,84,4,1600000
+72,Mercedes,Tigor,2019,38000,Diesel,Manual,Second,12,1598,81,5,1300000
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Top 10 Car models and create a bar chart?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-05-22 03:54:53 [INFO] Executing Step 3: CodeGenerator
+2024-05-22 03:54:53 [INFO] HTTP Request: GET https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct "HTTP/1.1 200 OK"
+2024-05-22 03:54:54 [INFO] HTTP Request: POST https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct/predictions "HTTP/1.1 201 Created"
+2024-05-22 03:54:54 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/d1rkjnzjphrhy0cfkn0v4q7w2m "HTTP/1.1 200 OK"
+2024-05-22 03:54:55 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/d1rkjnzjphrhy0cfkn0v4q7w2m "HTTP/1.1 200 OK"
+2024-05-22 03:54:56 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/d1rkjnzjphrhy0cfkn0v4q7w2m "HTTP/1.1 200 OK"
+2024-05-22 03:54:57 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/d1rkjnzjphrhy0cfkn0v4q7w2m "HTTP/1.1 200 OK"
+2024-05-22 03:54:58 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/d1rkjnzjphrhy0cfkn0v4q7w2m "HTTP/1.1 200 OK"
+2024-05-22 03:54:58 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+23,Tata,Camry,2016,30000,Petrol,Automatic,First,22,1199,150,7,4000000
+96,Hyundai,Innova,2020,15000,Diesel,Manual,Third,17,1998,84,4,1600000
+72,Mercedes,Tigor,2019,38000,Diesel,Manual,Second,12,1598,81,5,1300000
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Top 10 Car models and create a bar chart?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-05-22 03:54:58 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+car_data = pd.concat(dfs)  # Concatenate all dataframes in the list into a single dataframe
+top_10_models = car_data['Model'].value_counts().head(10)  # Get top 10 most common car models
+top_10_models.plot(kind='bar')  # Create a bar chart of the top 10 car models
+plt.title('Top 10 Car Models')  # Set title for the chart
+plt.xlabel('Model')  # Set x-axis label
+plt.ylabel('Count')  # Set y-axis label
+plt.savefig('top_10_models_chart.png')  # Save the chart as "top_10_models_chart.png"
+
+# Declare result var:
+result = {
+    "type": "plot",
+    "value": "top_10_models_chart.png"
+}
+            ```
+            
+2024-05-22 03:54:58 [INFO] Executing Step 4: CachePopulation
+2024-05-22 03:54:58 [INFO] Executing Step 5: CodeCleaning
+2024-05-22 03:54:58 [INFO] Saving charts to F:\Documents backup\AI Projects\to be determined\Streamline-Analyst\exports\charts\temp_chart.png
+2024-05-22 03:54:58 [INFO] 
+Code running:
+```
+car_data = pd.concat(dfs)
+top_10_models = car_data['Model'].value_counts().head(10)
+top_10_models.plot(kind='bar')
+plt.title('Top 10 Car Models')
+plt.xlabel('Model')
+plt.ylabel('Count')
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'}
+        ```
+2024-05-22 03:54:58 [INFO] Executing Step 6: CodeExecution
+2024-05-22 03:54:58 [ERROR] Failed with error: Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2024-05-22 03:54:58 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-05-22 03:54:58 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-22 03:54:58 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-22 03:54:58 [INFO] Using prompt: <dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+23,Tata,Camry,2016,30000,Petrol,Automatic,First,22,1199,150,7,4000000
+96,Hyundai,Innova,2020,15000,Diesel,Manual,Third,17,1998,84,4,1600000
+72,Mercedes,Tigor,2019,38000,Diesel,Manual,Second,12,1598,81,5,1300000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Top 10 Car models and create a bar chart?
+
+You generated this python code:
+car_data = pd.concat(dfs)
+top_10_models = car_data['Model'].value_counts().head(10)
+top_10_models.plot(kind='bar')
+plt.title('Top 10 Car Models')
+plt.xlabel('Model')
+plt.ylabel('Count')
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2024-05-22 03:54:58 [INFO] Executing Step 1: CodeGenerator
+2024-05-22 03:54:59 [INFO] HTTP Request: POST https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct/predictions "HTTP/1.1 201 Created"
+2024-05-22 03:54:59 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/ydxmnyr6pxrhr0cfkn192y4ejc "HTTP/1.1 200 OK"
+2024-05-22 03:55:00 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/ydxmnyr6pxrhr0cfkn192y4ejc "HTTP/1.1 200 OK"
+2024-05-22 03:55:01 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/ydxmnyr6pxrhr0cfkn192y4ejc "HTTP/1.1 200 OK"
+2024-05-22 03:55:02 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/ydxmnyr6pxrhr0cfkn192y4ejc "HTTP/1.1 200 OK"
+2024-05-22 03:55:02 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+23,Tata,Camry,2016,30000,Petrol,Automatic,First,22,1199,150,7,4000000
+96,Hyundai,Innova,2020,15000,Diesel,Manual,Third,17,1998,84,4,1600000
+72,Mercedes,Tigor,2019,38000,Diesel,Manual,Second,12,1598,81,5,1300000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Top 10 Car models and create a bar chart?
+
+You generated this python code:
+car_data = pd.concat(dfs)
+top_10_models = car_data['Model'].value_counts().head(10)
+top_10_models.plot(kind='bar')
+plt.title('Top 10 Car Models')
+plt.xlabel('Model')
+plt.ylabel('Count')
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2024-05-22 03:55:02 [INFO] Code generated:
+            ```
+            car_data = pd.concat(dfs)
+top_10_models = car_data['Model'].value_counts().head(10)
+top_10_models.plot(kind='bar')
+plt.title('Top 10 Car Models')
+plt.xlabel('Model')
+plt.ylabel('Count')
+result = {'type': 'plot', 'value': plt}
+            ```
+            
+2024-05-22 03:55:02 [INFO] Executing Step 2: CodeCleaning
+2024-05-22 03:55:02 [INFO] 
+Code running:
+```
+car_data = pd.concat(dfs)
+top_10_models = car_data['Model'].value_counts().head(10)
+top_10_models.plot(kind='bar')
+plt.title('Top 10 Car Models')
+plt.xlabel('Model')
+plt.ylabel('Count')
+result = {'type': 'plot', 'value': plt}
+        ```
+2024-05-22 03:55:02 [ERROR] Failed with error: Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'module'> must match with type plot
+
+2024-05-22 03:55:02 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2024-05-22 03:55:02 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-22 03:55:02 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-22 03:55:02 [INFO] Using prompt: <dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+23,Tata,Camry,2016,30000,Petrol,Automatic,First,22,1199,150,7,4000000
+96,Hyundai,Innova,2020,15000,Diesel,Manual,Third,17,1998,84,4,1600000
+72,Mercedes,Tigor,2019,38000,Diesel,Manual,Second,12,1598,81,5,1300000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Top 10 Car models and create a bar chart?
+
+You generated this python code:
+car_data = pd.concat(dfs)
+top_10_models = car_data['Model'].value_counts().head(10)
+top_10_models.plot(kind='bar')
+plt.title('Top 10 Car Models')
+plt.xlabel('Model')
+plt.ylabel('Count')
+result = {'type': 'plot', 'value': plt}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'module'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2024-05-22 03:55:02 [INFO] Executing Step 1: CodeGenerator
+2024-05-22 03:55:02 [INFO] HTTP Request: POST https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct/predictions "HTTP/1.1 201 Created"
+2024-05-22 03:55:03 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/ar3hmx8mk5rhw0cfkn1bpkb33g "HTTP/1.1 200 OK"
+2024-05-22 03:55:04 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/ar3hmx8mk5rhw0cfkn1bpkb33g "HTTP/1.1 200 OK"
+2024-05-22 03:55:05 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/ar3hmx8mk5rhw0cfkn1bpkb33g "HTTP/1.1 200 OK"
+2024-05-22 03:55:06 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/ar3hmx8mk5rhw0cfkn1bpkb33g "HTTP/1.1 200 OK"
+2024-05-22 03:55:06 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+23,Tata,Camry,2016,30000,Petrol,Automatic,First,22,1199,150,7,4000000
+96,Hyundai,Innova,2020,15000,Diesel,Manual,Third,17,1998,84,4,1600000
+72,Mercedes,Tigor,2019,38000,Diesel,Manual,Second,12,1598,81,5,1300000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Top 10 Car models and create a bar chart?
+
+You generated this python code:
+car_data = pd.concat(dfs)
+top_10_models = car_data['Model'].value_counts().head(10)
+top_10_models.plot(kind='bar')
+plt.title('Top 10 Car Models')
+plt.xlabel('Model')
+plt.ylabel('Count')
+result = {'type': 'plot', 'value': plt}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'module'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2024-05-22 03:55:06 [INFO] Code generated:
+            ```
+            car_data = pd.concat(dfs)
+top_10_models = car_data['Model'].value_counts().head(10)
+fig, ax = plt.subplots()
+top_10_models.plot(kind='bar', ax=ax)
+ax.set_title('Top 10 Car Models')
+ax.set_xlabel('Model')
+ax.set_ylabel('Count')
+plt.savefig('top_10_models.png')  # Save the plot as an image
+result = 'top_10_models.png'  # Return the image path/URL instead of the plot object
+            ```
+            
+2024-05-22 03:55:06 [INFO] Executing Step 2: CodeCleaning
+2024-05-22 03:55:06 [INFO] Saving charts to F:\Documents backup\AI Projects\to be determined\Streamline-Analyst\exports\charts\temp_chart.png
+2024-05-22 03:55:06 [INFO] 
+Code running:
+```
+car_data = pd.concat(dfs)
+top_10_models = car_data['Model'].value_counts().head(10)
+fig, ax = plt.subplots()
+top_10_models.plot(kind='bar', ax=ax)
+ax.set_title('Top 10 Car Models')
+ax.set_xlabel('Model')
+ax.set_ylabel('Count')
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+        ```
+2024-05-22 03:55:06 [ERROR] Failed with error: Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\helpers\output_validator.py", line 73, in validate_result
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Result must be in the format of dictionary of type and value
+
+2024-05-22 03:55:06 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2024-05-22 03:55:06 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-22 03:55:06 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-22 03:55:06 [INFO] Using prompt: <dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+23,Tata,Camry,2016,30000,Petrol,Automatic,First,22,1199,150,7,4000000
+96,Hyundai,Innova,2020,15000,Diesel,Manual,Third,17,1998,84,4,1600000
+72,Mercedes,Tigor,2019,38000,Diesel,Manual,Second,12,1598,81,5,1300000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Top 10 Car models and create a bar chart?
+
+You generated this python code:
+car_data = pd.concat(dfs)
+top_10_models = car_data['Model'].value_counts().head(10)
+fig, ax = plt.subplots()
+top_10_models.plot(kind='bar', ax=ax)
+ax.set_title('Top 10 Car Models')
+ax.set_xlabel('Model')
+ax.set_ylabel('Count')
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\helpers\output_validator.py", line 73, in validate_result
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Result must be in the format of dictionary of type and value
+
+
+Fix the python code above and return the new python code:
+2024-05-22 03:55:06 [INFO] Executing Step 1: CodeGenerator
+2024-05-22 03:55:06 [INFO] HTTP Request: POST https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct/predictions "HTTP/1.1 201 Created"
+2024-05-22 03:55:07 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/fkm5v114v9rhr0cfkn18nbsfy4 "HTTP/1.1 200 OK"
+2024-05-22 03:55:08 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/fkm5v114v9rhr0cfkn18nbsfy4 "HTTP/1.1 200 OK"
+2024-05-22 03:55:09 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/fkm5v114v9rhr0cfkn18nbsfy4 "HTTP/1.1 200 OK"
+2024-05-22 03:55:10 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/fkm5v114v9rhr0cfkn18nbsfy4 "HTTP/1.1 200 OK"
+2024-05-22 03:55:11 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/fkm5v114v9rhr0cfkn18nbsfy4 "HTTP/1.1 200 OK"
+2024-05-22 03:55:11 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+23,Tata,Camry,2016,30000,Petrol,Automatic,First,22,1199,150,7,4000000
+96,Hyundai,Innova,2020,15000,Diesel,Manual,Third,17,1998,84,4,1600000
+72,Mercedes,Tigor,2019,38000,Diesel,Manual,Second,12,1598,81,5,1300000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Top 10 Car models and create a bar chart?
+
+You generated this python code:
+car_data = pd.concat(dfs)
+top_10_models = car_data['Model'].value_counts().head(10)
+fig, ax = plt.subplots()
+top_10_models.plot(kind='bar', ax=ax)
+ax.set_title('Top 10 Car Models')
+ax.set_xlabel('Model')
+ax.set_ylabel('Count')
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\helpers\output_validator.py", line 73, in validate_result
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Result must be in the format of dictionary of type and value
+
+
+Fix the python code above and return the new python code:
+            
+2024-05-22 03:55:11 [INFO] Code generated:
+            ```
+            car_data = pd.concat(dfs)
+top_10_models = car_data['Model'].value_counts().head(10)
+fig, ax = plt.subplots()
+top_10_models.plot(kind='bar', ax=ax)
+ax.set_title('Top 10 Car Models')
+ax.set_xlabel('Model')
+ax.set_ylabel('Count')
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = {'path': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'}
+            ```
+            
+2024-05-22 03:55:11 [INFO] Executing Step 2: CodeCleaning
+2024-05-22 03:55:11 [INFO] Saving charts to F:\Documents backup\AI Projects\to be determined\Streamline-Analyst\exports\charts\temp_chart.png
+2024-05-22 03:55:11 [INFO] 
+Code running:
+```
+car_data = pd.concat(dfs)
+top_10_models = car_data['Model'].value_counts().head(10)
+fig, ax = plt.subplots()
+top_10_models.plot(kind='bar', ax=ax)
+ax.set_title('Top 10 Car Models')
+ax.set_xlabel('Model')
+ax.set_ylabel('Count')
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = {'path': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'}
+        ```
+2024-05-22 03:55:11 [ERROR] Failed with error: Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\helpers\output_validator.py", line 73, in validate_result
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Result must be in the format of dictionary of type and value
+
+2024-05-22 03:55:11 [ERROR] Pipeline failed on step 6: Result must be in the format of dictionary of type and value
+2024-05-22 03:55:58 [INFO] Question: Top 10 Car models and create a pie chart?
+2024-05-22 03:55:58 [INFO] Running PandasAI with langchain_replicate LLM...
+2024-05-22 03:55:58 [INFO] Prompt ID: 5664e342-b645-4121-a295-e4fc1925632a
+2024-05-22 03:55:58 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-22 03:55:58 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-22 03:55:58 [INFO] Executing Step 1: CacheLookup
+2024-05-22 03:55:58 [INFO] Executing Step 2: PromptGeneration
+2024-05-22 03:55:58 [INFO] Using prompt: <dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+100,Honda,GLE,2019,26000,Petrol,Automatic,Third,16,2143,190,5,650000
+95,Mercedes,T-Roc,2021,15000,Diesel,Automatic,Second,21,1999,84,7,600000
+71,BMW,Sonata,2016,42000,Diesel,Manual,First,25,2998,167,4,3500000
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Top 10 Car models and create a pie chart?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-05-22 03:55:58 [INFO] Executing Step 3: CodeGenerator
+2024-05-22 03:55:59 [INFO] HTTP Request: GET https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct "HTTP/1.1 200 OK"
+2024-05-22 03:55:59 [INFO] HTTP Request: POST https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct/predictions "HTTP/1.1 201 Created"
+2024-05-22 03:56:00 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/987ke6qjchrhw0cfkn1aeap1eg "HTTP/1.1 200 OK"
+2024-05-22 03:56:01 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/987ke6qjchrhw0cfkn1aeap1eg "HTTP/1.1 200 OK"
+2024-05-22 03:56:01 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/987ke6qjchrhw0cfkn1aeap1eg "HTTP/1.1 200 OK"
+2024-05-22 03:56:02 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/987ke6qjchrhw0cfkn1aeap1eg "HTTP/1.1 200 OK"
+2024-05-22 03:56:03 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/987ke6qjchrhw0cfkn1aeap1eg "HTTP/1.1 200 OK"
+2024-05-22 03:56:03 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+100,Honda,GLE,2019,26000,Petrol,Automatic,Third,16,2143,190,5,650000
+95,Mercedes,T-Roc,2021,15000,Diesel,Automatic,Second,21,1999,84,7,600000
+71,BMW,Sonata,2016,42000,Diesel,Manual,First,25,2998,167,4,3500000
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Top 10 Car models and create a pie chart?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-05-22 03:56:03 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+df = pd.concat(dfs)  # Concatenate all dataframes in the list into a single dataframe
+top_10_models = df['Model'].value_counts().head(10)  # Get top 10 most common car models
+pie_chart = top_10_models.plot.pie(figsize=(8, 8), autopct='%1.1f%%')  # Create a pie chart
+plt.title('Top 10 Car Models')  # Set title for the pie chart
+plt.axis('equal')  # Ensure pie is drawn as a circle
+plt.savefig('top_10_models_pie_chart.png')  # Save the pie chart as png file
+
+# Declare result var: 
+result = { "type": "plot", "value": "top_10_models_pie_chart.png" }  # Return the path of the saved pie chart as the result
+            ```
+            
+2024-05-22 03:56:03 [INFO] Executing Step 4: CachePopulation
+2024-05-22 03:56:03 [INFO] Executing Step 5: CodeCleaning
+2024-05-22 03:56:03 [INFO] Saving charts to F:\Documents backup\AI Projects\to be determined\Streamline-Analyst\exports\charts\temp_chart.png
+2024-05-22 03:56:03 [INFO] 
+Code running:
+```
+df = pd.concat(dfs)
+top_10_models = df['Model'].value_counts().head(10)
+pie_chart = top_10_models.plot.pie(figsize=(8, 8), autopct='%1.1f%%')
+plt.title('Top 10 Car Models')
+plt.axis('equal')
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'}
+        ```
+2024-05-22 03:56:03 [INFO] Executing Step 6: CodeExecution
+2024-05-22 03:56:03 [ERROR] Failed with error: Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2024-05-22 03:56:03 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-05-22 03:56:03 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-22 03:56:03 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-22 03:56:03 [INFO] Using prompt: <dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+100,Honda,GLE,2019,26000,Petrol,Automatic,Third,16,2143,190,5,650000
+95,Mercedes,T-Roc,2021,15000,Diesel,Automatic,Second,21,1999,84,7,600000
+71,BMW,Sonata,2016,42000,Diesel,Manual,First,25,2998,167,4,3500000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Top 10 Car models and create a pie chart?
+
+You generated this python code:
+df = pd.concat(dfs)
+top_10_models = df['Model'].value_counts().head(10)
+pie_chart = top_10_models.plot.pie(figsize=(8, 8), autopct='%1.1f%%')
+plt.title('Top 10 Car Models')
+plt.axis('equal')
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2024-05-22 03:56:03 [INFO] Executing Step 1: CodeGenerator
+2024-05-22 03:56:04 [INFO] HTTP Request: POST https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct/predictions "HTTP/1.1 201 Created"
+2024-05-22 03:56:05 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/kb0gfyr545rhw0cfkn1v2h3k5g "HTTP/1.1 200 OK"
+2024-05-22 03:56:05 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/kb0gfyr545rhw0cfkn1v2h3k5g "HTTP/1.1 200 OK"
+2024-05-22 03:56:06 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/kb0gfyr545rhw0cfkn1v2h3k5g "HTTP/1.1 200 OK"
+2024-05-22 03:56:07 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/kb0gfyr545rhw0cfkn1v2h3k5g "HTTP/1.1 200 OK"
+2024-05-22 03:56:07 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+100,Honda,GLE,2019,26000,Petrol,Automatic,Third,16,2143,190,5,650000
+95,Mercedes,T-Roc,2021,15000,Diesel,Automatic,Second,21,1999,84,7,600000
+71,BMW,Sonata,2016,42000,Diesel,Manual,First,25,2998,167,4,3500000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Top 10 Car models and create a pie chart?
+
+You generated this python code:
+df = pd.concat(dfs)
+top_10_models = df['Model'].value_counts().head(10)
+pie_chart = top_10_models.plot.pie(figsize=(8, 8), autopct='%1.1f%%')
+plt.title('Top 10 Car Models')
+plt.axis('equal')
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2024-05-22 03:56:07 [INFO] Code generated:
+            ```
+            df = pd.concat(dfs)
+top_10_models = df['Model'].value_counts().head(10)
+pie_chart = top_10_models.plot.pie(figsize=(8, 8), autopct='%1.1f%%')
+plt.title('Top 10 Car Models')
+plt.axis('equal')
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+return result
+            ```
+            
+2024-05-22 03:56:07 [INFO] Executing Step 2: CodeCleaning
+2024-05-22 03:56:07 [INFO] Saving charts to F:\Documents backup\AI Projects\to be determined\Streamline-Analyst\exports\charts\temp_chart.png
+2024-05-22 03:56:07 [INFO] 
+Code running:
+```
+df = pd.concat(dfs)
+top_10_models = df['Model'].value_counts().head(10)
+pie_chart = top_10_models.plot.pie(figsize=(8, 8), autopct='%1.1f%%')
+plt.title('Top 10 Car Models')
+plt.axis('equal')
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+return result
+        ```
+2024-05-22 03:56:07 [ERROR] Failed with error: Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 171, in execute_code
+    exec(code, environment)
+  File "<string>", line 8
+SyntaxError: 'return' outside function
+
+2024-05-22 03:56:07 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2024-05-22 03:56:07 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-22 03:56:07 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-22 03:56:07 [INFO] Using prompt: <dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+100,Honda,GLE,2019,26000,Petrol,Automatic,Third,16,2143,190,5,650000
+95,Mercedes,T-Roc,2021,15000,Diesel,Automatic,Second,21,1999,84,7,600000
+71,BMW,Sonata,2016,42000,Diesel,Manual,First,25,2998,167,4,3500000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Top 10 Car models and create a pie chart?
+
+You generated this python code:
+df = pd.concat(dfs)
+top_10_models = df['Model'].value_counts().head(10)
+pie_chart = top_10_models.plot.pie(figsize=(8, 8), autopct='%1.1f%%')
+plt.title('Top 10 Car Models')
+plt.axis('equal')
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+return result
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 171, in execute_code
+    exec(code, environment)
+  File "<string>", line 8
+SyntaxError: 'return' outside function
+
+
+Fix the python code above and return the new python code:
+2024-05-22 03:56:07 [INFO] Executing Step 1: CodeGenerator
+2024-05-22 03:56:07 [INFO] HTTP Request: POST https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct/predictions "HTTP/1.1 201 Created"
+2024-05-22 03:56:08 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/3bhvs00jr1rhy0cfkn1spvphcw "HTTP/1.1 200 OK"
+2024-05-22 03:56:09 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/3bhvs00jr1rhy0cfkn1spvphcw "HTTP/1.1 200 OK"
+2024-05-22 03:56:10 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/3bhvs00jr1rhy0cfkn1spvphcw "HTTP/1.1 200 OK"
+2024-05-22 03:56:11 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/3bhvs00jr1rhy0cfkn1spvphcw "HTTP/1.1 200 OK"
+2024-05-22 03:56:11 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+100,Honda,GLE,2019,26000,Petrol,Automatic,Third,16,2143,190,5,650000
+95,Mercedes,T-Roc,2021,15000,Diesel,Automatic,Second,21,1999,84,7,600000
+71,BMW,Sonata,2016,42000,Diesel,Manual,First,25,2998,167,4,3500000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Top 10 Car models and create a pie chart?
+
+You generated this python code:
+df = pd.concat(dfs)
+top_10_models = df['Model'].value_counts().head(10)
+pie_chart = top_10_models.plot.pie(figsize=(8, 8), autopct='%1.1f%%')
+plt.title('Top 10 Car Models')
+plt.axis('equal')
+plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+return result
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 171, in execute_code
+    exec(code, environment)
+  File "<string>", line 8
+SyntaxError: 'return' outside function
+
+
+Fix the python code above and return the new python code:
+            
+2024-05-22 03:56:11 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+def generate_pie_chart():
+    df = pd.concat(dfs)
+    top_10_models = df['Model'].value_counts().head(10)
+    pie_chart = top_10_models.plot.pie(figsize=(8, 8), autopct='%1.1f%%')
+    plt.title('Top 10 Car Models')
+    plt.axis('equal')
+    plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+    result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+    return result
+            ```
+            
+2024-05-22 03:56:11 [INFO] Executing Step 2: CodeCleaning
+2024-05-22 03:56:11 [INFO] Saving charts to F:\Documents backup\AI Projects\to be determined\Streamline-Analyst\exports\charts\temp_chart.png
+2024-05-22 03:56:11 [INFO] 
+Code running:
+```
+def generate_pie_chart():
+    df = pd.concat(dfs)
+    top_10_models = df['Model'].value_counts().head(10)
+    pie_chart = top_10_models.plot.pie(figsize=(8, 8), autopct='%1.1f%%')
+    plt.title('Top 10 Car Models')
+    plt.axis('equal')
+    plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+    result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+    return result
+        ```
+2024-05-22 03:56:11 [ERROR] Failed with error: Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-05-22 03:56:11 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2024-05-22 03:56:11 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-22 03:56:11 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-22 03:56:11 [INFO] Using prompt: <dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+100,Honda,GLE,2019,26000,Petrol,Automatic,Third,16,2143,190,5,650000
+95,Mercedes,T-Roc,2021,15000,Diesel,Automatic,Second,21,1999,84,7,600000
+71,BMW,Sonata,2016,42000,Diesel,Manual,First,25,2998,167,4,3500000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Top 10 Car models and create a pie chart?
+
+You generated this python code:
+def generate_pie_chart():
+    df = pd.concat(dfs)
+    top_10_models = df['Model'].value_counts().head(10)
+    pie_chart = top_10_models.plot.pie(figsize=(8, 8), autopct='%1.1f%%')
+    plt.title('Top 10 Car Models')
+    plt.axis('equal')
+    plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+    result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+    return result
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2024-05-22 03:56:11 [INFO] Executing Step 1: CodeGenerator
+2024-05-22 03:56:11 [INFO] HTTP Request: POST https://api.replicate.com/v1/models/snowflake/snowflake-arctic-instruct/predictions "HTTP/1.1 201 Created"
+2024-05-22 03:56:12 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/67jprt11qhrhy0cfkn1vwa3m34 "HTTP/1.1 200 OK"
+2024-05-22 03:56:13 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/67jprt11qhrhy0cfkn1vwa3m34 "HTTP/1.1 200 OK"
+2024-05-22 03:56:13 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/67jprt11qhrhy0cfkn1vwa3m34 "HTTP/1.1 200 OK"
+2024-05-22 03:56:15 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/67jprt11qhrhy0cfkn1vwa3m34 "HTTP/1.1 200 OK"
+2024-05-22 03:56:15 [INFO] HTTP Request: GET https://api.replicate.com/v1/predictions/67jprt11qhrhy0cfkn1vwa3m34 "HTTP/1.1 200 OK"
+2024-05-22 03:56:15 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:100x13
+Car_ID,Brand,Model,Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Mileage,Engine,Power,Seats,Price
+100,Honda,GLE,2019,26000,Petrol,Automatic,Third,16,2143,190,5,650000
+95,Mercedes,T-Roc,2021,15000,Diesel,Automatic,Second,21,1999,84,7,600000
+71,BMW,Sonata,2016,42000,Diesel,Manual,First,25,2998,167,4,3500000
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Top 10 Car models and create a pie chart?
+
+You generated this python code:
+def generate_pie_chart():
+    df = pd.concat(dfs)
+    top_10_models = df['Model'].value_counts().head(10)
+    pie_chart = top_10_models.plot.pie(figsize=(8, 8), autopct='%1.1f%%')
+    plt.title('Top 10 Car Models')
+    plt.axis('equal')
+    plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+    result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+    return result
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2024-05-22 03:56:15 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+def generate_pie_chart():
+    df = pd.concat(dfs)
+    top_10_models = df['Model'].value_counts().head(10)
+    pie_chart = top_10_models.plot.pie(figsize=(8, 8), autopct='%1.1f%%')
+    plt.title('Top 10 Car Models')
+    plt.axis('equal')
+    plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+    result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+    return result  # Returning the result from the function now
+            ```
+            
+2024-05-22 03:56:15 [INFO] Executing Step 2: CodeCleaning
+2024-05-22 03:56:15 [INFO] Saving charts to F:\Documents backup\AI Projects\to be determined\Streamline-Analyst\exports\charts\temp_chart.png
+2024-05-22 03:56:15 [INFO] 
+Code running:
+```
+def generate_pie_chart():
+    df = pd.concat(dfs)
+    top_10_models = df['Model'].value_counts().head(10)
+    pie_chart = top_10_models.plot.pie(figsize=(8, 8), autopct='%1.1f%%')
+    plt.title('Top 10 Car Models')
+    plt.axis('equal')
+    plt.savefig('F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png')
+    result = 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/exports/charts/temp_chart.png'
+    return result
+        ```
+2024-05-22 03:56:15 [ERROR] Failed with error: Traceback (most recent call last):
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Documents backup\AI Projects\to be determined\env\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-05-22 03:56:15 [ERROR] Pipeline failed on step 6: No result returned

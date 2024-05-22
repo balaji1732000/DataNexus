@@ -9,9 +9,11 @@ from langchain.callbacks import get_openai_callback
 from streamlit_chat import message
 
 from pandasai import SmartDataframe
+from dotenv import load_dotenv
 
-# Replicate API token
-os.environ["REPLICATE_API_TOKEN"] = "r8_f4MP4W51W2lwXi8MLRZMlC0MshE3XU03gnIMi"
+load_dotenv()
+# The REPLICATE_API_TOKEN will now be available in the environment variables
+os.environ["REPLICATE_API_TOKEN"] = os.getenv("REPLICATE_API_TOKEN")
 
 
 class PandasAgent:

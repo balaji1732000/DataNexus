@@ -1,6 +1,7 @@
 *.pyc
 *.swp
 *.swo
+*.env
 *.DS_Store
 *.ipynb_checkpoints
 data/

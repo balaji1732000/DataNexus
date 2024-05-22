@@ -20,3 +20,5 @@ statsmodels==0.14.0
 tiktoken
 langchain-community
 pdfplumber
+python-dotenv
+replicate
