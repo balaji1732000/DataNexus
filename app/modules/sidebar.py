@@ -3,7 +3,7 @@ import streamlit as st
 
 class Sidebar:
 
-    MODEL_OPTIONS = ["gpt-3.5-turbo", "gpt-4"]
+    MODEL_OPTIONS = ["snowflake/snowflake-arctic-instruct", "gpt-4"]
     TEMPERATURE_MIN_VALUE = 0.0
     TEMPERATURE_MAX_VALUE = 1.0
     TEMPERATURE_DEFAULT_VALUE = 0.0
@@ -43,7 +43,7 @@ class Sidebar:
         st.session_state["temperature"] = temperature
 
     def show_options(self):
-        with st.sidebar.expander("🛠️ Robby's Tools", expanded=False):
+        with st.sidebar.expander("🛠️ DataNexus Tools", expanded=False):
 
             self.reset_chat_button()
             self.model_selector()
