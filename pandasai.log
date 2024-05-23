@@ -9155,3 +9155,57 @@ def analyze_data(dfs: list[pd.DataFrame]) ->dict:
         ```
 2024-05-23 12:11:03 [INFO] Answer: {'type': 'number', 'value': 100}
 2024-05-23 12:11:03 [INFO] Executed in: 0.15279889106750488s
+2024-05-23 12:12:14 [INFO] Question: How Many rows?
+2024-05-23 12:12:14 [INFO] Running PandasAI with langchain_replicate LLM...
+2024-05-23 12:12:14 [INFO] Prompt ID: 6763bee0-3759-4a4b-98fe-e08a61e2d2f7
+2024-05-23 12:12:14 [INFO] Using cached response
+2024-05-23 12:12:14 [INFO] Code generated:
+```
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Count the number of rows in dfs[0]
+    num_rows = dfs[0].shape[0]
+    
+    # Prepare a dictionary with the result
+    result_dict = { "type": "number", "value": num_rows }
+    
+    return result_dict
+```
+
+2024-05-23 12:12:14 [INFO] Saving charts to F:\Documents backup\AI Projects\to be determined\Streamline-Analyst\temp_chart.png
+2024-05-23 12:12:14 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    num_rows = dfs[0].shape[0]
+    result_dict = {'type': 'number', 'value': num_rows}
+    return result_dict
+        ```
+2024-05-23 12:12:14 [INFO] Answer: {'type': 'number', 'value': 100}
+2024-05-23 12:12:14 [INFO] Executed in: 0.03828883171081543s
+2024-05-23 19:29:59 [INFO] Question: How Many rows?
+2024-05-23 19:29:59 [INFO] Running PandasAI with langchain_replicate LLM...
+2024-05-23 19:29:59 [INFO] Prompt ID: 576160b7-7915-41d3-ab6a-5d312e6c6f43
+2024-05-23 19:29:59 [INFO] Using cached response
+2024-05-23 19:29:59 [INFO] Code generated:
+```
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Count the number of rows in dfs[0]
+    num_rows = dfs[0].shape[0]
+    
+    # Prepare a dictionary with the result
+    result_dict = { "type": "number", "value": num_rows }
+    
+    return result_dict
+```
+
+2024-05-23 19:29:59 [INFO] Saving charts to F:\Documents backup\AI Projects\to be determined\Streamline-Analyst\temp_chart.png
+2024-05-23 19:29:59 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    num_rows = dfs[0].shape[0]
+    result_dict = {'type': 'number', 'value': num_rows}
+    return result_dict
+        ```
+2024-05-23 19:29:59 [INFO] Answer: {'type': 'number', 'value': 100}
+2024-05-23 19:29:59 [INFO] Executed in: 0.0935983657836914s
