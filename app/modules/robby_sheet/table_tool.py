@@ -6,7 +6,8 @@ import matplotlib.pyplot as plt
 import streamlit as st
 from langchain_community.llms import Replicate
 from langchain.callbacks import get_openai_callback
-from pandasai.callbacks import BaseCallback
+
+# from pandasai.callbacks import BaseCallback
 from streamlit_chat import message
 import replicate
 
@@ -34,13 +35,13 @@ class PandasAgent:
     def __init__(self):
         pass
 
-    class StreamlitCallback(BaseCallback):
-        def __init__(self, container) -> None:
-            """Initialize callback handler."""
-            self.container = container
+    # class StreamlitCallback(BaseCallback):
+    #     def __init__(self, container) -> None:
+    #         """Initialize callback handler."""
+    #         self.container = container
 
-        def on_code(self, response: str):
-            self.container.code(response)
+    #     def on_code(self, response: str):
+    #         self.container.code(response)
 
     class StreamlitResponse(ResponseParser):
         def __init__(self, context) -> None:
@@ -80,7 +81,7 @@ class PandasAgent:
 
         try:
             print("Running pandas_ai with query:", query)
-            response = pandas_ai.run(query)  # Execute the query with pandas_ai
+            response = pandas_ai.chat(query)  # Execute the query with pandas_ai
             print("Response from pandas_ai:", response)
 
             fig = plt.gcf()
