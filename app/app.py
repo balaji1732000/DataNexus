@@ -210,15 +210,18 @@ with st.container():
                     placeholder="e-g : How many rows ?",
                 )
                 submitted_query = st.form_submit_button("Submit")
-                reset_chat_button = st.form_submit_button("Reset Chat")
-                if reset_chat_button:
-                    st.session_state["chat_history"] = []
+                # reset_chat_button = st.form_submit_button("Reset Chat")
+                # if reset_chat_button:
+                #     st.session_state.chat_history = []
             if submitted_query:
                 result, captured_output = csv_agent.get_agent_response(df, query)
+                print("Result:", result)
+                print("Captured Output:", captured_output)
                 cleaned_thoughts = csv_agent.process_agent_thoughts(captured_output)
+                print("Cleaned Thoughts:", cleaned_thoughts)
                 csv_agent.display_agent_thoughts(cleaned_thoughts)
                 csv_agent.update_chat_history(query, result)
-                csv_agent.display_chat_history()
+            csv_agent.display_chat_history()
             if st.session_state.df is not None:
                 st.subheader("Current dataframe:")
                 st.write(st.session_state.df)

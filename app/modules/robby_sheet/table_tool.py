@@ -6,10 +6,13 @@ import matplotlib.pyplot as plt
 import streamlit as st
 from langchain_community.llms import Replicate
 from langchain.callbacks import get_openai_callback
+from pandasai.callbacks import BaseCallback
 from streamlit_chat import message
+import replicate
 
 from pandasai import SmartDataframe
 from dotenv import load_dotenv
+from pandasai.responses.response_parser import ResponseParser
 
 load_dotenv()
 # The REPLICATE_API_TOKEN will now be available in the environment variables
@@ -31,29 +34,66 @@ class PandasAgent:
     def __init__(self):
         pass
 
+    class StreamlitCallback(BaseCallback):
+        def __init__(self, container) -> None:
+            """Initialize callback handler."""
+            self.container = container
+
+        def on_code(self, response: str):
+            self.container.code(response)
+
+    class StreamlitResponse(ResponseParser):
+        def __init__(self, context) -> None:
+            super().__init__(context)
+
+        def format_dataframe(self, result):
+            st.dataframe(result["value"])
+            return
+
+        def format_plot(self, result):
+            st.image(result["value"])
+            return
+
+        def format_other(self, result):
+            st.write(result["value"])
+            return
+
     def get_agent_response(self, uploaded_file_content, query):
         llm = Replicate(
             model="snowflake/snowflake-arctic-instruct",
+            model_kwargs={"temperature": 0.75, "max_length": 500, "top_p": 1},
         )
-
+        # llm = replicate("snowflake/snowflake-arctic-instruct")
+        # container = st.container()
         # Using a dictionary for config instead of a set
-        pandas_ai = SmartDataframe(uploaded_file_content, config={"llm": llm})
+        pandas_ai = SmartDataframe(
+            uploaded_file_content,
+            config={
+                "llm": llm,
+                "response_parser": self.StreamlitResponse,
+                # "callback": self.StreamlitCallback(container),
+            },
+        )
 
         old_stdout = sys.stdout
         sys.stdout = captured_output = StringIO()
 
-        response = pandas_ai.chat(query)
-        fig = plt.gcf()
-        if fig.get_axes():
-            # Adjust the figure size
-            fig.set_size_inches(12, 6)
+        try:
+            print("Running pandas_ai with query:", query)
+            response = pandas_ai.run(query)  # Execute the query with pandas_ai
+            print("Response from pandas_ai:", response)
 
-            # Adjust the layout tightness
-            plt.tight_layout()
-            buf = BytesIO()
-            fig.savefig(buf, format="png")
-            buf.seek(0)
-            st.image(buf, caption="Generated Plot")
+            fig = plt.gcf()
+            if fig.get_axes():
+                fig.set_size_inches(12, 6)
+                plt.tight_layout()
+                buf = BytesIO()
+                fig.savefig(buf, format="png")
+                buf.seek(0)
+                st.image(buf, caption="Generated Plot")
+        except Exception as e:
+            print("Error during pandas_ai.run execution:", e)
+            response = None
 
         sys.stdout = old_stdout
         return response, captured_output
