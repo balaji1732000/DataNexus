@@ -9128,3 +9128,30 @@ def analyze_data(dfs: list[pd.DataFrame]) ->dict:
         ```
 2024-05-23 09:24:16 [INFO] Answer: {'type': 'plot', 'value': 'F:/Documents backup/AI Projects/to be determined/Streamline-Analyst/temp_chart.png'}
 2024-05-23 09:24:16 [INFO] Executed in: 9.665254354476929s
+2024-05-23 12:11:03 [INFO] Question: How Many rows?
+2024-05-23 12:11:03 [INFO] Running PandasAI with langchain_replicate LLM...
+2024-05-23 12:11:03 [INFO] Prompt ID: 3952ca39-fb58-4069-a04b-d0add4703cdf
+2024-05-23 12:11:03 [INFO] Using cached response
+2024-05-23 12:11:03 [INFO] Code generated:
+```
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Count the number of rows in dfs[0]
+    num_rows = dfs[0].shape[0]
+    
+    # Prepare a dictionary with the result
+    result_dict = { "type": "number", "value": num_rows }
+    
+    return result_dict
+```
+
+2024-05-23 12:11:03 [INFO] Saving charts to F:\Documents backup\AI Projects\to be determined\Streamline-Analyst\temp_chart.png
+2024-05-23 12:11:03 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    num_rows = dfs[0].shape[0]
+    result_dict = {'type': 'number', 'value': num_rows}
+    return result_dict
+        ```
+2024-05-23 12:11:03 [INFO] Answer: {'type': 'number', 'value': 100}
+2024-05-23 12:11:03 [INFO] Executed in: 0.15279889106750488s
