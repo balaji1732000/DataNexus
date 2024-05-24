@@ -4,7 +4,6 @@ import os
 import importlib
 import sys
 import pandas as pd
-import matplotlib.pyplot as plt
 from io import BytesIO
 from util import load_lottie, stream_data, welcome_message, introduction_message
 from prediction_model import prediction_model_pipeline
@@ -13,7 +12,6 @@ from regression_model import regression_model_pipeline
 from visualization import data_visualization
 from src.util import read_file_from_streamlit
 import base64
-from langchain_community.llms import Replicate
 
 # Modules for Chat Analyser
 import os
@@ -27,14 +25,6 @@ from modules.layout import Layout
 from modules.utils import Utilities
 from modules.sidebar import Sidebar
 from dotenv import load_dotenv
-
-from pandasai import SmartDataframe
-from dotenv import load_dotenv
-from pandasai.responses.response_parser import ResponseParser
-
-load_dotenv()
-# The REPLICATE_API_TOKEN will now be available in the environment variables
-os.environ["REPLICATE_API_TOKEN"] = os.getenv("REPLICATE_API_TOKEN")
 
 load_dotenv()
 
@@ -181,42 +171,23 @@ with st.container():
     elif page == "AI Data Agents":
         layout, sidebar, utils = Layout(), Sidebar(), Utilities()
         layout.show_header("Data")
-
-        if "reset_chat" not in st.session_state:
-            st.session_state["reset_chat"] = False
-        if "chat_history" not in st.session_state:
-            st.session_state["chat_history"] = []
-
+        st.session_state.setdefault("reset_chat", False)
         uploaded_file = utils.handle_upload(["csv", "xlsx"])
         if uploaded_file:
             sidebar.about()
             uploaded_file_content = BytesIO(uploaded_file.getvalue())
-            if uploaded_file.type in [
-                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                "application/vnd.ms-excel",
-            ]:
+            if (
+                uploaded_file.type
+                == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                or uploaded_file.type == "application/vnd.ms-excel"
+            ):
                 df = pd.read_excel(uploaded_file_content)
             else:
                 df = pd.read_csv(uploaded_file_content)
             st.session_state.df = df
-
-            llm = Replicate(
-                model="snowflake/snowflake-arctic-instruct",
-            )
-            # llm = replicate(
-            #     model="snowflake/snowflake-arctic-instruct",
-            # )
-            # container = st.container()
-            # Using a dictionary for config instead of a set
-            pandas_ai = SmartDataframe(
-                df,
-                config={
-                    "llm": llm,
-                    "response_parser": PandasAgent.StreamlitResponse,
-                    # "callback": self.StreamlitCallback(container),
-                },
-            )
-
+            if "chat_history" not in st.session_state:
+                st.session_state["chat_history"] = []
+            csv_agent = PandasAgent()
             with st.form(key="query"):
                 query = st.text_input(
                     "Ask DataNexus",
@@ -225,29 +196,17 @@ with st.container():
                     placeholder="e.g., How many rows?",
                 )
                 submitted_query = st.form_submit_button("Submit")
-
             if submitted_query:
-                result = pandas_ai.chat(query)
-                # Check if there's a plot in the current figure
-                fig = plt.gcf()
-                if fig.get_axes():
-                    # Adjust the figure size
-                    fig.set_size_inches(12, 6)
-                    # Adjust the layout tightness
-                    plt.tight_layout()
-                    buf = BytesIO()
-                    fig.savefig(buf, format="png")
-                    buf.seek(0)
-                    st.image(buf, caption="Generated Plot")
-                    plt.close(fig)  # Close the figure to avoid duplicate plot
-                st.write("main:", result)
-                st.markdown(f"**Agent:** {result}")
+                result, captured_out = csv_agent.get_agent_response(df, query)
+                st.markdown(
+                    f"<div style='background-color: #ADD8E6; padding: 10px; border-radius: 5px; text-align: left; color: black;'>"
+                    f"{result}</div>",
+                    unsafe_allow_html=True,
+                )
                 # cleaned_thoughts = csv_agent.process_agent_thoughts(captured_output)
                 # csv_agent.display_agent_thoughts(cleaned_thoughts)
                 # csv_agent.update_chat_history(query, result)
-
             # csv_agent.display_chat_history()
-
             if st.session_state.df is not None:
                 st.subheader("Current dataframe:")
                 st.write(st.session_state.df)

@@ -4,11 +4,12 @@ import os
 from io import StringIO, BytesIO
 import matplotlib.pyplot as plt
 import streamlit as st
-# from langchain.chains import LLMChain
+from langchain.chains import LLMChain
 from langchain_community.llms import Replicate
 from langchain_core.prompts import PromptTemplate
 from langchain.callbacks import get_openai_callback
-from pandasai.callbacks import BaseCallback
+
+# from pandasai.callbacks import BaseCallback
 from streamlit_chat import message
 import replicate
 
@@ -36,13 +37,13 @@ class PandasAgent:
     def __init__(self):
         pass
 
-    class StreamlitCallback(BaseCallback):
-        def __init__(self, container) -> None:
-            """Initialize callback handler."""
-            self.container = container
+    # class StreamlitCallback(BaseCallback):
+    #     def __init__(self, container) -> None:
+    #         """Initialize callback handler."""
+    #         self.container = container
 
-        def on_code(self, response: str):
-            self.container.code(response)
+    #     def on_code(self, response: str):
+    #         self.container.code(response)
 
     class StreamlitResponse(ResponseParser):
         def __init__(self, context) -> None:
@@ -63,11 +64,12 @@ class PandasAgent:
     def get_agent_response(self, uploaded_file_content, query):
         llm = Replicate(
             model="snowflake/snowflake-arctic-instruct",
+            model_kwargs={"temperature": 0.75, "max_length": 500, "top_p": 1},
         )
         # llm = replicate(
         #     model="snowflake/snowflake-arctic-instruct",
         # )
-        # container = st.container()
+        container = st.container()
         # Using a dictionary for config instead of a set
         pandas_ai = SmartDataframe(
             uploaded_file_content,
@@ -82,27 +84,20 @@ class PandasAgent:
         sys.stdout = captured_output = StringIO()
 
         response = pandas_ai.chat(query)
-
-        # # Chat with the DataFrame using the provided query
-        # result = pandas_ai.chat(query)
-        # print(result)
-        # return result, chat
-
-        # Check if there's a plot in the current figure
         fig = plt.gcf()
         if fig.get_axes():
             # Adjust the figure size
             fig.set_size_inches(12, 6)
+
             # Adjust the layout tightness
             plt.tight_layout()
             buf = BytesIO()
             fig.savefig(buf, format="png")
             buf.seek(0)
             st.image(buf, caption="Generated Plot")
-            plt.close(fig)  # Close the figure to avoid duplicate plots
 
         sys.stdout = old_stdout
-        print(response, captured_output)
+        print(response)
         return response, captured_output
 
     def process_agent_thoughts(self, captured_output):

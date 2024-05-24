@@ -25,5 +25,6 @@ streamlit_chat
 pandas==1.5.3
 seaborn==0.13.2
 statsmodels==0.14.0
-pandasai==1.4.10
+pandasai
 sqlalchemy
+io
