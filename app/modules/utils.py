@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 import pdfplumber
 
-from modules.chatbot import Chatbot
+# from modules.chatbot import Chatbot
 from modules.embedder import Embedder
 
 
@@ -86,21 +86,21 @@ class Utilities:
         # print(uploaded_file)
         return uploaded_file
 
-    @staticmethod
-    def setup_chatbot(uploaded_file, model, temperature):
-        """
-        Sets up the chatbot with the uploaded file, model, and temperature
-        """
-        embeds = Embedder()
+    # @staticmethod
+    # def setup_chatbot(uploaded_file, model, temperature):
+    #     """
+    #     Sets up the chatbot with the uploaded file, model, and temperature
+    #     """
+    #     embeds = Embedder()
 
-        with st.spinner("Processing..."):
-            uploaded_file.seek(0)
-            file = uploaded_file.read()
-            # Get the document embeddings for the uploaded file
-            vectors = embeds.getDocEmbeds(file, uploaded_file.name)
+    #     with st.spinner("Processing..."):
+    #         uploaded_file.seek(0)
+    #         file = uploaded_file.read()
+    #         # Get the document embeddings for the uploaded file
+    #         vectors = embeds.getDocEmbeds(file, uploaded_file.name)
 
-            # Create a Chatbot instance with the specified model and temperature
-            chatbot = Chatbot(model, temperature, vectors)
-        st.session_state["ready"] = True
+    #         # Create a Chatbot instance with the specified model and temperature
+    #         chatbot = Chatbot(model, temperature, vectors)
+    #     st.session_state["ready"] = True
 
-        return chatbot
+    #     return chatbot
