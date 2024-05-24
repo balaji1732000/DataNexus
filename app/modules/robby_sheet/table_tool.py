@@ -4,7 +4,7 @@ import os
 from io import StringIO, BytesIO
 import matplotlib.pyplot as plt
 import streamlit as st
-from langchain.chains import LLMChain
+# from langchain.chains import LLMChain
 from langchain_community.llms import Replicate
 from langchain_core.prompts import PromptTemplate
 from langchain.callbacks import get_openai_callback
